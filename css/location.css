@@ -1,31 +1,3 @@
-
-/* Color and Graphics theory
-
-1. The colors I decided with was an orange(#FE7A49) and various cream colors
-    (#8F755F #F5F4DB #D2C1B0) and for contrast I picked a shade of brown (#37251B)
-    - I wanted to goe for colors that looked coffee related, and the orange is 
-        due to the local highschool colors being orange and black. Also the shops
-        logo has orange in it and thought it would be good to use
-
-2. Color palete: #FE7A49 #8F755F #F5F4DB #D2C1B0 #37251B
-
-3. For aranging the colors of the site i plan on having the header and footer hold the most contrast
-    with the background/ whitespace reserved for the middle value. Doing this will allow for more contrast
-    overall. The orange will be used as accent to make better distinguish areas of make areas pop. The
-    lighter tones of cream will be used as background and areas for text to populate. 
-
-*/
-
-/* Font Strategy
-
-1. I plan on using Arial for p tags or simple messages and Britannic for titles or headers of sections.  
-
-2. Bold will be resurved for important sections. Italics wont be used. 
-
-3. normal spacing on text
-
-*/
-
 #container{
     display: grid;
     grid-template-areas: 'header '
@@ -38,7 +10,7 @@
 }
 body{
     margin: auto;
-
+    ;
     background-color: #8F755F;
     
 }
@@ -84,42 +56,31 @@ a{
     color: #F5F4DB;
 }
 #main_container{
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-#main_display{
-    grid-area: main;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    height: 50%;
-    border-bottom: 5px solid #37251B;
-    align-items: center;
+    align-content: center;
+}
 
+#googleMap{
+    grid-column: 2;
+    width: 80%;
 }
-#main_image{
+#locationText{
     grid-column: 1;
-    grid-row: 1;
-}
-#orderBTN{
-    grid-column: 1;
-    grid-row: 1;
-    width: 15%;
-    height: 75px;
-    z-index: 1;
-    background-color: #8F755F;
-    border: 5px solid #FE7A49;
     text-align: center;
-    
+}
+#locContent{
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    background-color: #D2C1B0;
+    border-top: 2px solid #37251B ;
+    border-bottom: 2px solid #37251B;
+}
 
-}
-.Obtn{
-    width: 100%;
-    width: 100%;
-}
 #second_display{
     grid-area: main2;
     display: grid;
@@ -131,57 +92,11 @@ a{
     margin-bottom: 10%;
     
 }
-
-.secondDisplayImg{
-    height: 300px;
-    width: 25%;
-}
 .bottomImg{
     height: 100%;
     width: 100%;
 }
 
-#image1{
-    grid-column: 1 / span 1;
-    grid-row: 1;
-    
-}
-#image2{
-    grid-column: 2 / span 1;
-    grid-row: 1;
-}
-#image3{
-    grid-column: 3 / span 1;
-    grid-row: 1;
-}
-#image4{
-    grid-column: 4 / span 1;
-    grid-row: 1;
-}
-#hidText1{
-    grid-column: 1 / span 1;
-    grid-row: 1;
-    align-content: center;
-    align-items: center;
-    
-}
-#hidText2{
-    grid-column: 2 / span 1;
-    grid-row: 1;
-
-}
-#hidText3{
-    grid-column: 3 / span 1;
-    grid-row: 1;
-
-    
-}
-#hidText4{
-    grid-column: 4 / span 1;
-    grid-row: 1;
-
-    
-}
 .textform{
     background-color: #37251B;
     z-index: -1;
@@ -360,7 +275,7 @@ hr{
     background-color: #37251B;
     height: 2px;
     width: 70%;
-    float: left;
+    
 }
 aside{
     font-size: 3em;
