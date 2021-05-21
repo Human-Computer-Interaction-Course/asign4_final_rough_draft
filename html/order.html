@@ -16,7 +16,7 @@
         <meta name="keywords" content="Coffee, Coffe shop, lunch, breakfast, cafe">
         <meta name="author" content="Sean Gregor">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/menu.css">
+        <link rel="stylesheet" href="../css/home.css">
 
     </head>
     <body id="container">
@@ -32,8 +32,41 @@
         </div>
         <!--End of header-->
 
-        <div id="main_container">
+        <div id="orderMenu_container">
+                <!--Buttons to take info from input fields and send them through JS to return as JSON-->
+            <div id="menuBttns">
+                <button  class="item" value="Bridge House Club" > Bridge House Club</button>
+                <button  class="item" value="Roast Beef" > Hot Roast Beef</button>
+                <button  class="item" value="16oz Coffe" > 16oz Coffee</button>
+                <button  class="item" value="Ice-Cream" > Ice-Cream</button>
+                <button  class="item" value="Chips" > Reguar Chips</button>
+                <button  class="item" value="Chef Salad" > Chef Salad</button>
+                <button  class="item" value="Affagato"> Affagato</button>
+                <button  class="item" value="Pastrami sandwich"> Hot Pastrami sandwich</button>
+                <button  class="item" value="Spring Salad"> Spring Salad</button>
+                <button  class="item" value="Latte"> 12oz Latte</button>
+                <button  class="item" value="16oz Jar of Honey"> Honey</button>
+                <button  class="item" value="16oz Mug"> Mug</button>
 
+                
+            </div>
+
+            <div id="placeOrderBttn">
+                <button type="submit" id="submitOrder" onclick="submitOrder()"><p style="font-size: 2.2vh;font-weight: bold;">Place Order</p></button>
+            </div>
+                <!--Save selection to an array and display contents to the side-->
+                <!--call js-->
+            <div id="currentOrderList">
+                <h1>Your order</h1>
+                <hr class="wd100">
+                <br>
+                <br>
+                <select id="productList" Name="listOfItems" Size="Number_of_options" multiple="multiple" style="font-size: 2vh;">  
+         
+                </select>  
+                <button name="delete" type="button" onclick="remove()">Remove</button>
+                <!--put list here-->
+            </div>
         </div>
 
            
@@ -66,5 +99,8 @@
                 </div>
             </div>
         </footer>
+        <script src="../javascript/scripts.js">
+        
+        </script>
     </body>
 </html>

@@ -10,3 +10,40 @@
 
 
 */
+
+/* !Order, Javascript functionality  */
+const buttonArray = document.querySelectorAll(".item");
+const x = document.getElementById("productList");
+console.log(buttonArray);
+for (i = 0; i < buttonArray.length; i++) {
+    buttonArray[i].onclick = function(event){
+        var option = document.createElement("option");
+        option.text = event.target.value;
+        x.add(option);
+    }
+}
+
+function remove(){
+    var x = document.getElementById("productList");
+    alert(x[x.selectedIndex].value + " will Be removed from order!")
+    x.remove(x.selectedIndex);
+
+}
+
+function submitOrder(){
+    var person = prompt("Please enter a name for your ticket.");
+    var x = document.getElementById("productList");
+    var y = "";
+    for ( i = 0; i < x.length; i++) {
+        var element = x[i].value;
+        y= y+" | "+element+" | ";
+    }
+    alert("Hello "+ person +", your order will be finished shortly"+"\n"+"------------------------"+"\n Order:"+y);
+}
+
+/* EOS*/
+
+
+
+
+

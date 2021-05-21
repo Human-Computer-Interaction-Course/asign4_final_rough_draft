@@ -26,22 +26,30 @@
 
 */
 
+html{
+    height: 100%;
+}
+
+/* !body */
+body{
+    margin: 0%;
+    padding: 0%;
+    height: 100%;
+}
+
 #container{
     display: grid;
-    grid-template-areas: 'header '
+    grid-template-rows: 16vh auto 14vh ;
+    grid-template-areas:  'header '
                          'main'
-                         'main2'
-                         'about'
-                         'hours'
                          'footer';
-
-}
-body{
     margin: auto;
-
     background-color: #8F755F;
-    
+    min-height: 100%;
+    position: relative;
 }
+
+
 #header_container{
     grid-area: header;
     display: flex;
@@ -50,6 +58,7 @@ body{
     align-items: center;
     background-color: #37251B;
     border-bottom: 12px solid #FE7A49;
+    height: 16vh;
 
 }
 #header_buttons{
@@ -73,6 +82,8 @@ body{
 #logo{
     height: 40%;
     width: 60%;
+    margin-left: 3%;
+    margin-top: 3%;
 }
 
 #open_message{
@@ -89,6 +100,135 @@ a{
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
+/* !menu*/
+
+#menu_container{
+    margin-left: 5%;
+}
+
+
+/* !Location CSS */
+#location_container{
+    display: grid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-content: center;
+    margin-bottom: 7%;
+}
+
+#googleMap{
+    grid-column: 2;
+    width: 80%;
+}
+#locationText{
+    grid-column: 1;
+    text-align: center;
+}
+#locContent{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    background-color: #D2C1B0;
+    border-top: 2px solid #37251B ;
+    border-bottom: 2px solid #37251B;
+    align-content: center;
+}
+#secondLocCont{
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    margin:5%;
+}
+/* End of Location Css */
+
+
+
+/* Start of !Giftcards Css  */
+
+#gift_container{
+    display: flex;
+    grid-area: main;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+}
+#gift_button{
+    width: 15vw;
+    height: 10vh;
+}
+#button_container{
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+    height: 5vh;
+}
+
+/* End of gifCards Css */
+
+/* Start of !orderNow Css  */
+
+#orderMenu_container{
+    display: grid;
+    grid-template-columns: 60vw 20vw;
+    grid-template-rows: 20vh auto 14vh;
+
+    color: #37251B;
+    align-self: center;
+    justify-self: center;
+    align-content: center;
+    
+}
+
+
+
+#placeOrderBttn{
+    grid-column: 2;
+    grid-row: 3;
+    align-self: center;
+    display: flex;
+    
+}
+
+#menuBttns{
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    align-self: center;
+}
+
+.item{
+    font-size: 5vh;
+    padding: 1%;
+    color: #37251B;
+    background-color: #D2C1B0;
+}
+
+
+#currentOrderList{
+    grid-column: 2;
+    grid-row: 1 ;
+    text-align: center;
+    align-items: flex-start;
+    
+}
+
+#productList{
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    padding-left: 1%;
+    text-align: right;
+    align-items: flex-end;
+}
+
+*:focus {
+    outline: none;
+}
+
+/* End of ordernow Css */
+
 #main_display{
     grid-area: main;
     display: grid;
@@ -104,27 +244,30 @@ a{
     grid-column: 1;
     grid-row: 1;
 }
+
+/* !Button */
 #orderBTN{
     grid-column: 1;
     grid-row: 1;
-    width: 15%;
-    height: 75px;
+    width: 15vw;
+    height: 10vh;
     z-index: 1;
-    background-color: #8F755F;
-    border: 5px solid #FE7A49;
     text-align: center;
+    align-self: center;
     
-
 }
 .Obtn{
     width: 100%;
-    width: 100%;
+    height: 100%;
 }
+
+
+
 #second_display{
     grid-area: main2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100%;
+    
     height: 300px;
     width: 100%;
     border-bottom: 15px solid #37251B;
@@ -163,23 +306,26 @@ a{
     grid-row: 1;
     align-content: center;
     align-items: center;
+    height: 100%;
     
 }
 #hidText2{
     grid-column: 2 / span 1;
     grid-row: 1;
+    height: 100%;
 
 }
 #hidText3{
     grid-column: 3 / span 1;
     grid-row: 1;
+    height: 100%;
 
     
 }
 #hidText4{
     grid-column: 4 / span 1;
     grid-row: 1;
-
+    height: 100%;
     
 }
 .textform{
@@ -192,10 +338,18 @@ a{
 
 }
 
+.textContainer{
+    align-self: center;
+    justify-content: center;
+    height: 50vh;
+}
+
 .showText{
     color:#8F755F;
     text-align: center;
-
+    height: 100%;
+    
+    
 }
 
 
@@ -210,7 +364,7 @@ a{
     height: 100%;
 }
 
-
+/* !footer*/
 #footer_container{
     grid-area: footer;
     display: grid;
@@ -218,8 +372,17 @@ a{
     grid-template-rows: 100%;
     background-color: #37251B;
     border-top: 12px solid #FE7A49;
-    height: 80px;
+    height: 14vh;
+    width: 100%;
+
 }
+
+footer{
+    position: absolute;
+    bottom: 0%;
+}
+
+
 #message{
     margin: auto;
     color: #F5F4DB;
@@ -250,20 +413,25 @@ a{
     margin-bottom: 10%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 2fr 1fr;
-    grid-template-rows: 10% 3% 10% 28% 50%;
+}
 
-}
-#about_title{
+#displayText{
     grid-column: 4;
-    grid-row: 4;
+    grid-row: 1 ;
+    align-self: center;
+    height: 50vh;
 }
-#about_info{
-    grid-column: 4;
-    grid-row: 5;
+
+.scaleText{
+    font-size: 2vh;
+    align-self: center;
 }
+
 #cooking_image{
     grid-column: 2;
-    grid-row: 1 / span all;
+    grid-row: 1 /span all;
+    align-content: center;
+    justify-content: center;
 }
 
 #hours_display{
@@ -289,7 +457,7 @@ a{
 
 /* font family for h2 tag*/
 h2{
-    font-size: 2em;
+    font-size: 7vh;
     font-family: Britannic;
    
 }
@@ -327,7 +495,7 @@ h2{
 }
 /* font family for p tag*/
 p{
-    font-size: 1em;
+    font-size: 3.5vh;
     font-family: Arial, Helvetica, sans-serif;
     color: #37251B;
 }
@@ -363,7 +531,7 @@ hr{
     float: left;
 }
 aside{
-    font-size: 3em;
+    font-size: 6vh;
     font-family: Britannic;
     color: #D2C1B0;
     text-align: center;
@@ -372,6 +540,8 @@ aside{
     width: 99%;
     align-self: center;
 }
+
+
 
 
 @media only screen and (max-width: 1024px) {
