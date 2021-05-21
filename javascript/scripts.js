@@ -35,8 +35,7 @@ function inform(){
 }
 
 function orderNow(){
-    console.log("change_page");
-    $('body').load( "order.html");
+    location.replace("html/order.html");
 }
 
 function submitOrder(){
