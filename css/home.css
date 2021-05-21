@@ -173,7 +173,7 @@ a{
 #orderMenu_container{
     display: grid;
     grid-template-columns: 60vw 20vw;
-    grid-template-rows: 20vh auto 14vh;
+    grid-template-rows: 14vh 30vh 14vh;
 
     color: #37251B;
     align-self: center;
@@ -188,7 +188,7 @@ a{
     grid-column: 2;
     grid-row: 3;
     align-self: center;
-    display: flex;
+    margin-top: 7%;
     
 }
 
@@ -196,6 +196,7 @@ a{
     grid-column: 1;
     grid-row: 1 / span 3;
     align-self: center;
+    align-content:flex-start;
 }
 
 .item{
@@ -208,7 +209,7 @@ a{
 
 #currentOrderList{
     grid-column: 2;
-    grid-row: 1 ;
+    grid-row: 1 / span 2 ;
     text-align: center;
     align-items: flex-start;
     
@@ -249,15 +250,14 @@ a{
 #orderBTN{
     grid-column: 1;
     grid-row: 1;
-    width: 15vw;
     height: 10vh;
     z-index: 1;
     text-align: center;
     align-self: center;
-    
+   
 }
 .Obtn{
-    width: 100%;
+    width: 15vw;
     height: 100%;
 }
 
@@ -396,10 +396,17 @@ footer{
 }
 .display2{
     width: auto; 
-    height: 300px;
+    height: 70vh;
     z-index: 0;
 
 }
+
+.display3{
+    width: auto;
+    height: 39vh;
+    z-index: 0;
+}
+
 .descriptor{
     color: #F5F4DB;
 }
@@ -408,6 +415,7 @@ footer{
     background-color: #D2C1B0;
     margin: auto;
     width: 100%;
+    height: 39vh;
     border-top: 9px solid #FE7A49;
     border-bottom: 15px solid #37251B;
     margin-bottom: 10%;
@@ -422,8 +430,16 @@ footer{
     height: 50vh;
 }
 
-.scaleText{
+.scaleText1{
     font-size: 2vh;
+    align-self: center;
+}
+.scaleText2{
+    font-size: 3vh;
+    align-self: center;
+}
+.scaleText3{
+    font-size: 4vh;
     align-self: center;
 }
 
@@ -439,6 +455,7 @@ footer{
     height: 5%;
     margin: auto;
     width: 100%;
+    height: 70vh;
     background-color: #D2C1B0;
     border-top: 9px solid #FE7A49;
     border-bottom: 15px solid #37251B;

@@ -52,16 +52,14 @@
             </div>
 
             <div id="placeOrderBttn">
-                <button type="submit" id="submitOrder" onclick="submitOrder()"><p style="font-size: 2.2vh;font-weight: bold;">Place Order</p></button>
+                <button type="submit" id="submitOrder" onclick="submitOrder()" style="font-size: 2.2vh;font-weight: bold;">Place Order</button>
             </div>
                 <!--Save selection to an array and display contents to the side-->
                 <!--call js-->
             <div id="currentOrderList">
                 <h1>Your order</h1>
                 <hr class="wd100">
-                <br>
-                <br>
-                <select id="productList" Name="listOfItems" Size="Number_of_options" multiple="multiple" style="font-size: 2vh;">  
+                <select id="productList" Name="listOfItems"  multiple="multiple" style="font-size: 2vh;">  
          
                 </select>  
                 <button name="delete" type="button" onclick="remove()">Remove</button>
